@@ -1,0 +1,50 @@
+LIEN DU GITHUB : https://github.com/CLASSEROOM-B1/forum-chevilles
+LIEN TRELLO : https://trello.com/b/R7vFKjC0/forum
+
+IDEE DE BASE :
+
+On peut défiler les posts à la twitter, mais en meme temps chaque post peut se faire swipe soit vers la gauche soit vers la droite
+
+Tusen = The Ultimate Social E-Network
+
+Buzzometer : réactions basiques et plus si on clique sur les 3 petits points. Possible de reposter sur son profil. Seul le nombre de réactionns compte dans l'algo ainsi que le nombre de rt, pas l'emoji utilisé pour réagir au post.
+
+Possible de commenter mais ça sera discret.
+
+Like uniquement pas de commentaires
+
+
+
+---------------------------------------------------------------------------------------------------------
+
+Site html/css/js
+
+Page 	accueil
+	Profil(tweets likés,, followers, nb followers, nb likes)
+	Login
+	Regisster
+
+Base de données
+table users : ID, email, Pseudo, username, password, photo de profil, bio, nb followers, nb following
+table message : IdTweet, ID author, isATweet, message, nblikes, date, nbcomments, idTweetReply (if tweet author reply = 0 else reply += 1)
+table likes : IdTweet, ID user
+table follow : IdUser, ID followingusers
+
+Gabriel : 1, 1, "coucou", 0, friday, 2, 0
+Thomas : 2, 2, "test", 25, friday, 0, 1
+Eoghan : 3, 3, "nul", 0, friday, 0, 1
+Eoghan : 4, 3, "ndfgh", 0, friday, 0, 1
+Eoghan : 5, 3, "ndfgh", 0, friday, 0, 4
+
+
+Eoghan : front++ + back | Design Page d'accueil,  |
+Thomas : front + back++ | Database, go  |
+Gabriel : front + back | go |
+Sam : front + figma | FIGMA, login, register |
+
+Backend : insertion de données, sélection des données, templates, algo trends/abos, routes/URL/redirection
+
+URL d'un tweet de thomasperge : http://localhost:3000/thomasperge/tweets/2
+
+2 = ID du tweet
+Quand on clique sur la div du tweet sur la page d'accueil, cette div aura l'ID du tweet (2 ici)

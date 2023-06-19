@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="shortcut icon" type="image/jpg" href="../static/ressources/img/favicon.ico" />
+	<link rel="stylesheet" href="../static/css/stylesign.css">
+	<title>Register</title>
+</head>
+
+<body>
+	<div class="bigdiv">
+
+		<div class="login-box">
+			<h2>S'inscrire</h2>
+			<div class="sendSignUpBtn">
+				<div class="user-box">
+					<input type="text" name="name" id="name" required>
+					<label for="user">Name</label>
+				</div>
+				<div class="user-box">
+					<input type="text" name="email" id="email" autocomplete="username" required>
+					<label for="user">Email</label>
+				</div>
+				<div class="user-box">
+					<input type="password" name="password" id="password" autocomplete="new-password" required>
+					<label for="user">Password</label>
+					<span id="msg"></span> 
+				</div>
+				<div class="user-box">
+					<input type="text" name="profilep" id="profilep">
+					<label for="user">URL Photo de profil (optionnel)</label>
+				</div>
+				<button name="submit" id="submit" type="submit">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					Submit
+				</button>
+			</div>
+			<div class="bottom"><a href="/login">Se connecter</a></div>
+		</div>
+
+</body>
+
+</html>
+
+<script src="../static/js/register.js"></script>

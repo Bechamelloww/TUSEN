@@ -1,0 +1,2 @@
+INSERT INTO allTweet(authorId, authorName, isATweet, message, nblikes, date, nbcomments, idTweetReply)
+    VALUES (3, "Zizou", 0, "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium perspiciatis ipsum accusamus dolor dignissimos voluptatibus deleniti corporis. Impedit esse, possimus odit assumenda maiores temporibus fuga officiis nam similique ut quasi?", 50, "2023-22-22", 3, 0);

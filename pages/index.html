@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>TUSEN</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="shortcut icon" type="image/jpg" href="../static/ressources/img/favicon.ico" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+	<link rel='stylesheet' type='text/css' media='screen' href='../static/css/style.css'>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+</head>
+
+<body>
+	<div class="bigdiv">
+		<div id="blurdiv" onclick="stopBlur()"></div>
+		<div class="hamburger-menu">
+			<input id="menu__toggle" type="checkbox" onclick="BlurWhenChecked()" />
+			<label class="menu__btn" for="menu__toggle">
+				<span></span>
+			</label>
+
+			<ul class="menu__box">
+				<li>
+					<label class="switch">
+						<input type="checkbox" id="modeC">
+						<span class="slider"></span>
+					</label>
+				</li>
+				<li><button onclick="location.href='/'">
+						<img src="../static/ressources/img/home.svg" alt="" height="35" width="35">
+						<span>Home</span>
+					</button>
+				</li>
+				<li><button id="profileBtnC" onclick="redirectToCookieProfile()">
+						<img src="../static/ressources/img/home.svg" alt="" height="35" width="35">
+						<span>Profil</span>
+					</button>
+				</li>
+				<li><button onclick="disconnect()">
+						<img src="../static/ressources/img/login.svg" alt="" height="35" width="35">
+						<span>Déconnexion</span>
+					</button>
+				</li>
+				<li><button onclick="location.href='/'">
+						<img src="../static/ressources/img/settings.svg" alt="" height="35" width="35">
+						<span>Paramètres</span>
+					</button>
+				</li>
+				<li><button onclick="location.href='/'">
+						<img src="../static/ressources/img/threedots.svg" alt="" height="35" width="35">
+						<span>Plus...</span>
+					</button>
+				</li>
+				<li><button onclick="showContainer()" id="postBtnC">
+						<img src="../static/ressources/img/add.svg" alt="" height="45" width="45">
+						<span>Poster</span>
+					</button>
+				</li>
+			</ul>
+		</div>
+		<div class="left-side">
+			<div class="logoTusncontainer flex">
+				<img class="logoTusn" src="../static/ressources/img/Tusen.png">
+			</div>
+			<label class="switch">
+				<input type="checkbox" id="mode">
+				<span class="slider"></span>
+			</label>
+			<button onclick="location.href='/'">
+				<img src="../static/ressources/img/home.svg" alt="" height="35" width="35">
+				<span>Home</span>
+			</button>
+			<button onclick="displayProfilePage()" id="profileBtn">
+				<img src="../static/ressources/img/home.svg" alt="" height="35" width="35">
+				<span>Profil</span>
+			</button>
+			<button onclick="disconnect()">
+				<img src="../static/ressources/img/login.svg" alt="" height="35" width="35">
+				<span>Déconnexion</span>
+			</button>
+			<button onclick="location.href='/'">
+				<img src="../static/ressources/img/settings.svg" alt="" height="35" width="35">
+				<span>Paramètres</span>
+			</button>
+			<button onclick="location.href='/'">
+				<img src="../static/ressources/img/threedots.svg" alt="" height="35" width="35">
+				<span>Plus...</span>
+			</button>
+
+			<button onclick="showContainer()" id="postBtn">
+				<img src="../static/ressources/img/add.svg" alt="" height="45" width="45">
+				<span>Poster</span>
+			</button>
+		</div>
+
+		<div class="profiles">
+			<!-- <div class="profile">
+				<div class="profile__image">
+				</div>
+				<div class="profile__infos">
+					<div class="profile__name"><img src="../static/ressources/img/zizou.webp">Zinédine <span
+							class="profile__age">@zizoublc</span></div>
+					<div class="profile__description">Bonjour c zizou, je tieng à dire que c un scandale Lorem ipsum
+						dolor sit amet consectetur adipisicing elit. Voluptatibus magni eum ipsa itaque, quam facilis
+						explicabo a esse cupiditate adipisci assumenda id. Nam quisquam vero ipsa debitis quo inventore
+						aut!</div>
+				</div>
+			</div> -->
+		</div>
+		
+		<div class="right-side">
+			<div class="trendsTitle">Tendance: France</div>
+
+			<div class="trendsArea">
+				<div class="trendContainer">
+					<div class="trendsSTitle">1 · Arts & Culture · Tendances</div>
+					<div class="trendsHastag">#JeudiPhotos</div>
+					<div class="trendsNbTweet">23.5k Tweets</div>
+				</div>
+
+				<div class="trendContainer">
+					<div class="trendsSTitle">2 · Sport</div>
+					<div class="trendsHastag">Roland Garros</div>
+					<div class="trendsNbTweet">58.7k Tweets</div>
+				</div>
+
+				<div class="trendContainer">
+					<div class="trendsSTitle">3 · Education</div>
+					<div class="trendsHastag">#Bac2023</div>
+					<div class="trendsNbTweet">3589 Tweets</div>
+				</div>
+
+				<div class="trendContainer">
+					<div class="trendsSTitle">4 · Aventure</div>
+					<div class="trendsHastag">#KohLanta</div>
+					<div class="trendsNbTweet">11.5k Tweets</div>
+				</div>
+
+				<div class="trendContainer">
+					<div class="trendsSTitle">5 · Sport</div>
+					<div class="trendsHastag">#Mbappé</div>
+					<div class="trendsNbTweet">105.5k Tweets</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="postcontainer flex" id="postcontainer">
+			<div class="hidearea" id="hidearea"></div>
+			<div class="postarea">
+				<div class="test2">
+					<p class="whatsup flex">Nouveau post</p>
+				</div>
+				<textarea id="textarea" class="twittertext flex" name="" id="" cols="30" rows="10"
+					placeholder="Message du post..."></textarea>
+				<div class="sendcontainer">
+					<button class="sendbtn flex" id="sendbtn">Poster</button>
+				</div>
+			</div>
+		</div>
+		<div class="commcontainer flex" id="commcontainer">
+			<div class="hidearea" id="commhidearea"></div>
+			<div class="commarea">
+				<div class="test2">
+					<p class="whatsup flex">Répondre au post</p>
+				</div>
+				<textarea id="commtextarea" class="twittertext flex" name="" id="" cols="30" rows="10"
+					placeholder="Réponse..."></textarea>
+				<div class="sendcontainer">
+					<button class="sendbtn flex" id="sendcommbtn">Répondre</button>
+				</div>
+			</div>
+		</div>
+		<div class="editcontainer flex" id="editcontainer">
+			<div class="edithidearea" id="edithidearea"></div>
+			<div class="editarea">
+				<div class="test2">
+					<p class="whatsup flex">Editer le post</p>
+				</div>
+				<textarea id="edittextarea" class="twittertext flex" name="" id="" cols="30" rows="10"
+					placeholder="Nouveau message..."></textarea>
+				<div class="sendcontainer">
+					<button class="sendbtn flex" id="sendeditbtn">Modifier</button>
+				</div>
+			</div>
+		</div>
+
+		<script src='../static/js/hammer.min.js'></script>
+		<script src='../static/js/post.js'></script>
+		<script src="../static/js/index.js"></script>
+		<script src='../static/js/main.js'></script>
+		<script src="../static/js/darkmode.js"></script>
+		<script src="../static/js/checkblur.js"></script>
+		<script src="../static/js/idprofile.js"></script>
+</body>
+
+</html>
